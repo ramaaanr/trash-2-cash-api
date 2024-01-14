@@ -12,9 +12,9 @@ app.get('/', (req, res) => {
   res.send('Welcome to Trash2Cash API');
 });
 
-// const productController = require("./product/product.controller");
+const wasteBankController = require('./api/waste-banks/waste-banks.controller');
 
-// app.use('/products', productController);
+app.use('/waste-banks', wasteBankController);
 
 app.listen(PORT, () => {
   console.log('Express API running in port: ' + PORT);
