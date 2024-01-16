@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "e577283d-c160-402e-b5f6-da4181f739c3",
+		"name": "🗑️REST API Trash2Cash",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Tests\" tab**\n\nTests help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/b5f280a7-4b09-48ec-857f-0a7ed99d7ef8/U2NyZWVuc2hvdCAyMDIzLTAzLTI3IGF0IDkuNDcuMjggUE0ucG5n\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) in \"Tests\" to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29200786"
+	},
+	"item": [
+		{
+			"name": "Waste Bank",
+			"item": [
+				{
+					"name": "Waste Banks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}waste-banks",
+							"host": [
+								"{{base_url}}waste-banks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Waste Bank By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}waste-banks/3zH2qlv89lovTr15wnMe",
+							"host": [
+								"{{base_url}}waste-banks"
+							],
+							"path": [
+								"3zH2qlv89lovTr15wnMe"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "XdIsruz4oyzolob9LO9p",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Waste Banks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"latitude\": -7.2575,\r\n    \"longitude\": 112.7521,\r\n    \"address\": \"Jl. Gembira No. 55, Kotabaru\",\r\n    \"active\": true,\r\n    \"close_hour\": \"17:00\",\r\n    \"open_hour\": \"09:00\",\r\n    \"title\": \"Bank Sampah Bahagia\",\r\n    \"time_zone\": \"Asia/Makasar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}waste-banks",
+							"host": [
+								"{{base_url}}waste-banks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "West Bank by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}waste-banks/jzosPdxKPL8s1HUxYDHm",
+							"host": [
+								"{{base_url}}waste-banks"
+							],
+							"path": [
+								"jzosPdxKPL8s1HUxYDHm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "West Bank by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"open_hour\": \"09:00\",\r\n    \"address\": \"Jl. Gembira No. 45, Test Update\",\r\n    \"title\": \"Bank Sampah Sejahtera Test Update\",\r\n    \"latitude\": -7.2575,\r\n    \"longitude\": 112.7521,\r\n    \"close_hour\": \"17:00\",\r\n    \"active\": true,\r\n    \"time_zone\": \"Asia/Jakarta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}waste-banks/Zsu72oTgJU10vyoLmfXF",
+							"host": [
+								"{{base_url}}waste-banks"
+							],
+							"path": [
+								"Zsu72oTgJU10vyoLmfXF"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}products",
+							"host": [
+								"{{base_url}}products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}waste-banks/3zH2qlv89lovTr15wnMe",
+							"host": [
+								"{{base_url}}waste-banks"
+							],
+							"path": [
+								"3zH2qlv89lovTr15wnMe"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "XdIsruz4oyzolob9LO9p",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Waste Banks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"latitude\": -7.2575,\r\n    \"longitude\": 112.7521,\r\n    \"address\": \"Jl. Gembira No. 55, Kotabaru\",\r\n    \"active\": true,\r\n    \"close_hour\": \"17:00\",\r\n    \"open_hour\": \"09:00\",\r\n    \"title\": \"Bank Sampah Bahagia\",\r\n    \"time_zone\": \"Asia/Makasar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}waste-banks",
+							"host": [
+								"{{base_url}}waste-banks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "West Bank by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}waste-banks/jzosPdxKPL8s1HUxYDHm",
+							"host": [
+								"{{base_url}}waste-banks"
+							],
+							"path": [
+								"jzosPdxKPL8s1HUxYDHm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "West Bank by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"open_hour\": \"09:00\",\r\n    \"address\": \"Jl. Gembira No. 45, Test Update\",\r\n    \"title\": \"Bank Sampah Sejahtera Test Update\",\r\n    \"latitude\": -7.2575,\r\n    \"longitude\": 112.7521,\r\n    \"close_hour\": \"17:00\",\r\n    \"active\": true,\r\n    \"time_zone\": \"Asia/Jakarta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}waste-banks/Zsu72oTgJU10vyoLmfXF",
+							"host": [
+								"{{base_url}}waste-banks"
+							],
+							"path": [
+								"Zsu72oTgJU10vyoLmfXF"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trash Pickups",
+			"item": [
+				{
+					"name": "All Trash Pickups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}trash-pickups/",
+							"host": [
+								"{{base_url}}trash-pickups"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Trash Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ASUS/Pictures/KBT NFT/Angi.jpg"
+								},
+								{
+									"key": "notes",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "-3.457825483534272",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "114.83642995825485",
+									"type": "text"
+								},
+								{
+									"key": "datetime",
+									"value": "2024-01-17T08:00:00.000Z",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "check",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "non-organic",
+									"type": "text"
+								},
+								{
+									"key": "waste_bank_id",
+									"value": "3zH2qlv89lovTr15wnMe",
+									"type": "text"
+								},
+								{
+									"key": "customer_id",
+									"value": "j6peXhU1BllJV9fUDmuc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}trash-pickups",
+							"host": [
+								"{{base_url}}trash-pickups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trash Pickups",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}trash-pickups/eGhNY5QHZDtTcmcaM3rm",
+							"host": [
+								"{{base_url}}trash-pickups"
+							],
+							"path": [
+								"eGhNY5QHZDtTcmcaM3rm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trash Pickups By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}trash-pickups/MtJgBXtRb6jwZeHOmhBa",
+							"host": [
+								"{{base_url}}trash-pickups"
+							],
+							"path": [
+								"MtJgBXtRb6jwZeHOmhBa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:2000/"
+		}
+	]
+}
