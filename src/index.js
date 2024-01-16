@@ -14,9 +14,11 @@ app.get('/', (req, res) => {
 
 const wasteBanksController = require('./api/waste-banks/waste-banks.controller');
 const productsController = require('./api/products/products.controller');
+const trashPickUpsController = require('./api/trash-pickups/trash-pickups.controller');
 
 app.use('/waste-banks', wasteBanksController);
 // app.use('/products', productsController);
+app.use('/trash-pickups', trashPickUpsController);
 
 app.listen(PORT, () => {
   console.log('Express API running in port: ' + PORT);
