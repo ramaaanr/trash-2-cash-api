@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const functions = require('firebase-functions');
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -23,3 +24,5 @@ app.use('/trash-pickups', trashPickUpsController);
 app.listen(PORT, () => {
   console.log('Express API running in port: ' + PORT);
 });
+
+exports.api = functions.https.onRequest(app);
