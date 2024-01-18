@@ -2,30 +2,45 @@
 
 ![Team Inspire Logo](inspire-logo.png)
 
-## Deskripsi
+## Description
 
-Selamat datang di repositori RESTful API Trash2Cash Team Inspire dalam partisipasi Hackfest 2024. Proyek ini dikembangkan oleh tim kami yang terdiri dari 4 orang:
+Welcome to the Trash2Cash Team Inspire RESTful API repository in Hackfest 2024 participation. This project was developed by our team of 4 people:
 1. Aldy Rahman - Hacker
 2. Rama Noor Rizki - Hacker
 3. Rifky Fauzan Rusadi - Hustler
 4. M. Alfi Rizki - Hipster
 
-Kami membuat API yang digunakan untuk mendukung service dari aplikasi buatan kami yaitu [Trash2Cash](https://github.com/aldy02/Trash2Cash/).
+We create an API that is used to support the services of our applications, namely [Trash2Cash](https://github.com/aldy02/Trash2Cash/).
 
-## Fitur Utama
+## End-points
 
-1. **waste-banks**: Service bank sampah
-2. **trash-pickup**: Service pengambilan sampah
-3. **products**: Service pengelolaan produk jual
+1. **waste-banks**: Waste bank service
+2. **trash-pickup**: Pick up service
+3. **products**: Managing product sales service
 
-## Teknologi yang Digunakan
+## Technology
 
-- [Express.js](https://expressjs.com/): Framework web untuk Node.js.
-- [Firebase](https://firebase.google.com/): Penggunaan firebase untuk membantuk pengelolaan database melalui Firestore.
+- [Express.js](https://expressjs.com/): Web Framework for Node.js
+- [Firebase](https://firebase.google.com/): Using Firebase to help manage databases via Firestore.
 
-## Instalasi
+## Instalation
 
-1. Clone repositori ini ke mesin lokal Anda:
+1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/team-inspire/restful-api.git
+   git clone https://github.com/ramaaanr/trash-2-cash-api
+
+2. Install package:
+
+   ```bash
+   npm install
+
+3. Copy and fill environtment variable:
+
+   ```bash
+   cp .env.development .env
+
+4. Serve your project to localhost:
+
+   ```bash
+   npm run dev
