@@ -78,10 +78,10 @@ router.post(
       buffer: req.file.buffer,
     };
     try {
-      // const buildImage = await uploadTrashImage(file);
+      const buildImage = await uploadTrashImage(file);
       const trashPickup = await createTrashPickup({
         ...req.body,
-        image_url: 'test.jpg',
+        image_url: buildImage,
       });
       res
         .status(200)
