@@ -1,8 +1,10 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const functions = require('firebase-functions');
+const cors = require('cors');
 dotenv.config();
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT;
